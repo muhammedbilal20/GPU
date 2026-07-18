@@ -1,0 +1,165 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#eceff3;
+    padding:30px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+h2{
+    margin:25px 0 10px;
+}
+
+.controls{
+    display:grid;
+    grid-template-columns:1fr 120px;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.controls label{
+    font-weight:bold;
+}
+
+.controls input[type=text]{
+    width:100%;
+    padding:10px;
+    font-size:16px;
+}
+
+.controls input[type=color]{
+    width:100%;
+    height:42px;
+    border:none;
+    cursor:pointer;
+}
+
+.inputTable{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.inputTable th{
+    background:#3657A7;
+    color:#fff;
+    padding:12px;
+}
+
+.inputTable td{
+    border:1px solid #ddd;
+    padding:10px;
+}
+
+.inputTable input{
+    width:100%;
+    padding:8px;
+    font-size:15px;
+}
+
+.buttons{
+    margin:20px 0;
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+button{
+    background:#3657A7;
+    color:#fff;
+    border:none;
+    padding:12px 18px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:15px;
+    transition:.2s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+.deleteBtn{
+    background:#d33;
+    width:100%;
+}
+
+hr{
+    margin:30px 0;
+}
+
+#chart{
+    width:800px;
+    margin:auto;
+    background:#fff;
+    border:2px solid #ccc;
+}
+
+#chartHeader{
+    background:#3657A7;
+    color:#fff;
+    font-size:26px;
+    font-weight:bold;
+    text-align:center;
+    padding:18px;
+}
+
+#chartTable{
+    width:100%;
+    border-collapse:collapse;
+}
+
+#chartTable tr{
+    border-bottom:1px solid #d7d7d7;
+}
+
+#chartTable td{
+    padding:14px 18px;
+    font-size:22px;
+}
+
+#chartTable td:first-child{
+    width:110px;
+    font-weight:bold;
+}
+
+#chartTable td:last-child{
+    font-weight:600;
+}
+
+@media(max-width:900px){
+
+    body{
+        padding:10px;
+    }
+
+    #chart{
+        width:100%;
+    }
+
+    #chartTable td{
+        font-size:18px;
+    }
+
+    .controls{
+        grid-template-columns:1fr;
+    }
+
+}
