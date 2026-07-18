@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPU Relative Performance Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- html2canvas for PNG download -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>GPU Relative Performance Generator</h1>
+
+    <div class="controls">
+
+        <label>Chart Title</label>
+        <input
+            type="text"
+            id="chartTitle"
+            value="Relative Performance"
+        >
+
+        <label>Header Color</label>
+        <input
+            type="color"
+            id="headerColor"
+            value="#3657A7"
+        >
+
+    </div>
+
+    <h2>GPU List</h2>
+
+    <table class="inputTable">
+
+        <thead>
+        <tr>
+            <th>GPU Name</th>
+            <th>Performance %</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+
+        <tbody id="gpuInputs">
+
+            <tr>
+                <td>
+                    <input
+                        type="text"
+                        class="gpuName"
+                        placeholder="RTX 3070"
+                    >
+                </td>
+
+                <td>
+                    <input
+                        type="number"
+                        class="gpuPercent"
+                        placeholder="69"
+                    >
+                </td>
+
+                <td>
+                    <button class="deleteBtn">X</button>
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <div class="buttons">
+
+        <button id="addGPU">
+            + Add GPU
+        </button>
+
+        <button id="generateChart">
+            Generate Chart
+        </button>
+
+        <button id="downloadPNG">
+            Download PNG
+        </button>
+
+    </div>
+
+    <hr>
+
+    <div id="chart">
+
+        <div id="chartHeader">
+            Relative Performance
+        </div>
+
+        <table id="chartTable">
+
+            <tbody>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
